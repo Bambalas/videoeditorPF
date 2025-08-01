@@ -147,23 +147,23 @@ body {
 
 /* Posicionamento dos vídeos nos cantos */
 .video-corner.top-left {
-    top: 5vh;
-    left: 5vw;
+    top: 10vh;
+    left: 10vw;
 }
 
 .video-corner.bottom-left {
-    bottom: 5vh;
-    left: 5vw;
+    bottom: 10vh;
+    left: 10vw;
 }
 
 .video-corner.top-right {
-    top: 5vh;
-    right: 5vw;
+    top: 10vh;
+    right: 10vw;
 }
 
 .video-corner.bottom-right {
-    bottom: 5vh;
-    right: 5vw;
+    bottom: 10vh;
+    right: 10vw;
 }
 
 .video-corner:hover {
@@ -354,51 +354,44 @@ body {
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 1200px) {
     .video-corner {
-        width: 280px; /* Reduz o tamanho dos vídeos nos cantos */
-        height: 157px; /* 16:9 */
+        width: 280px;
+        height: 157px;
     }
     .video-corner.vertical {
-        width: 120px;
-        height: 213px; /* 9:16 */
+        width: 160px; /* Mantém um bom tamanho para tablets/laptops menores */
+        height: 284px;
     }
     .hero-content {
-        width: 500px; /* Reduz o tamanho do conteúdo Hero */
+        width: 500px;
     }
 }
 
 @media (max-width: 992px) {
     .video-corner {
         position: relative; /* Volta para fluxo normal em telas menores */
-        top: auto; left: auto; bottom: auto; right: auto;
-        margin: 1rem auto; /* Centraliza verticalmente */
-        width: 80%; /* Ocupa mais espaço */
-        max-width: 400px;
-        height: auto;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        right: auto;
+        margin: 1rem auto; /* Centraliza verticalmente e adiciona margem entre eles */
+        width: 90%; /* Aumentado de 80% para ocupar mais espaço na tela */
+        max-width: 500px; /* Aumentado de 400px para permitir que fiquem maiores */
+        height: auto; /* Mantém a proporção */
     }
     .video-corner.vertical {
-        height: auto;
+        height: auto; /* Garante que a proporção 9:16 seja mantida */
     }
     .hero-center-container {
         flex-direction: column; /* Empilha os vídeos e o hero */
-        height: auto;
+        height: auto; /* Altura se ajusta ao conteúdo */
         padding: 2rem 1rem;
     }
     .hero-content {
-        width: 90%;
+        width: 90%; /* Ocupa mais largura */
         padding: 2rem 1rem;
-        margin-top: 2rem; /* Espaçamento entre vídeos e hero */
-    }
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    .hero-content .subtitle {
-        font-size: 1rem;
-    }
-    .video-popup-player {
-        width: 95%;
+        margin-top: 2rem;
     }
 }
-
 @media (max-width: 768px) {
     .section-padding {
         padding: 60px 0;
